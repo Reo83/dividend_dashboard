@@ -95,7 +95,7 @@ if check_password(): # 이 문장 아래의 모든 앱 코드는 로그인 성�
 
             # [4] 날짜 처리 및 배당 필터링
             df_all["거래일자"] = pd.to_datetime(df_all["거래일자"], errors='coerce')
-            div_keywords = ["배당금외화입금", "배당금입금", "ETF분배금입금", "현금배당"]
+            div_keywords = ["배당금외화입금", "배당금입금", "ETF분배금입금", "현금배당", "ETF/상장클래스 분배금입금"]
             df_div = df_all[df_all["거래종류"].isin(div_keywords)].copy()
 
             # [5] 결측값 처리 및 배당금 계산
@@ -440,4 +440,5 @@ if check_password(): # 이 문장 아래의 모든 앱 코드는 로그인 성�
 
     st.sidebar.header("앱 정보")
     st.sidebar.info("이 앱은 개인 배당금 내역을 분석하고 FIRE(Financial Independence, Retire Early) 전략 달성 현황을 시각화합니다.")
+
     
