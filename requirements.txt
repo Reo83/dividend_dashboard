@@ -1,7 +1,7 @@
+streamlit>=1.31.0
 pandas
 matplotlib
 numpy
 plotly
-streamlit
 openpyxl
-altair
+altair<5.0.0
